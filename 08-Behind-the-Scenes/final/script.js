@@ -231,3 +231,78 @@ console.log('Before marriage:', jessica2);
 console.log('After marriage: ', jessicaCopy);
 */
 
+function jess() {
+  var jessica = 'jessica';
+
+  if (jessica) {
+    let age = 20;
+    function jessica3() {
+      console.log('jessica3');
+    }
+    jessica3();
+  }
+
+  function jessica2() {
+    var jessicaName = 'jessica';
+  }
+}
+
+jess();
+
+// console.log(this);
+
+// function x() {
+//   console.log(this);
+// }
+// x();
+
+// const x = () => {
+//   console.log(this);
+// };
+
+// x();
+
+const obj = {
+  firstName: 'safras',
+  year: 1999,
+  calcAge: function () {
+    console.log(this);
+    console.log(this.year);
+  },
+};
+
+// obj.calcAge();
+
+const obj2 = {
+  year: 2000,
+};
+
+// obj2.calcAge = obj.calcAge;
+// obj2.calcAge();
+
+obj.calcAge();
+
+// var firstName = 'safras';
+const jonas = {
+  firstName: 'Jonas',
+  year: 1991,
+  // calcAge: () => {
+  //   console.log(this);
+  //   console.log(this.firstName);
+  // },
+
+  sayGreet: function () {
+    console.log(this);
+    // const self = this;
+    // function Hi() {
+    //   console.log(self.firstName);
+    // }
+    // Hi();
+    const Hi = () => {
+      console.log(this.firstName);
+    };
+    Hi();
+  },
+};
+
+jonas.sayGreet();
